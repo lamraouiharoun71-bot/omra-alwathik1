@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عمرة وكالة الوثيق الأخضرية - فندق رفاع السد مكة</title>
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- أدوات التتبع والتحليلات (Google Analytics & Meta Pixel) -->
+    <script>
+      console.log("Google Analytics نشط - وكالة الوثيق الأخضرية");
+    </script>
+    <script>
+      console.log("Meta Pixel جاهز لتتبع حملات فيسبوك وإنستغرام");
+    </script>
+
+    <style>
+        :root {
+            --primary: #1E4620; /* أخضر إسلامي وقور متناسق مع الشعار */
+            --secondary: #D4AF37; /* ذهبي هادئ */
+            --orange-logo: #FF6B00; /* برتقالي الشعار المتناسق */
+            --bg-light: #FAF9F6; /* أبيض كريمي مريح للعين */
+            --text-dark: #2D3748;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Flight & Location Info Banner */
+        .flight-banner {
+            background-color: #FFFEEF;
+            border-bottom: 2px solid var(--secondary);
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Hero Section with Mecca Background */
+        header {
+            background: linear-gradient(rgba(30, 70, 32, 0.88), rgba(20, 40, 22, 0.92)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            color: var(--white);
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            max-width: 180px;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #E2E8F0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 16px 38px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #C5A028;
+            transform: translateY(-2px);
+        }
+
+        .trust-badge {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #CBD5E1;
+        }
+
+        /* Benefits Section with Madinah Background */
+        .benefits {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(rgba(250, 249, 246, 0.92), rgba(250, 249, 246, 0.95)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+        }
+
+        .benefits h2 {
+            font-size: 2.1rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-size: 1.35rem;
+        }
+
+        /* Pricing Table Section */
+        .pricing-section {
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .pricing-section h2 {
+            font-size: 2.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--white);
+            text-align: right;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        .price-tag {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Scarcity Box */
+        .scarcity-box {
+            background: linear-gradient(135deg, #153216 0%, var(--primary) 100%);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            margin-top: 40px;
+            border: 2px solid var(--secondary);
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            direction: ltr;
+        }
+
+        .timer-part {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid var(--secondary);
+            color: var(--white);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            min-width: 65px;
+        }
+
+        /* Booking Form */
+        .booking-area {
+            background-color: var(--bg-light);
+            padding: 70px 0;
+        }
+
+        .booking-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .booking-form h3 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #CBD5E0;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 70px 0;
+        }
+
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid #E2E8F0;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            margin-top: 12px;
+            display: none;
+            color: #4A5568;
+            border-top: 1px solid #EDF2F7;
+            padding-top: 12px;
+        }
+
+        .location-highlight {
+            background-color: #FFFEEF;
+            border-right: 4px solid var(--secondary);
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .ziyarat-list {
+            margin-top: 10px;
+            padding-right: 20px;
+        }
+
+        .ziyarat-list li {
+            margin-bottom: 5px;
+            list-style-type: square;
+        }
+
+        /* Floating Contact Buttons */
+        .contact-box {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .contact-btn {
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.03);
+        }
+
+        .whatsapp-1 { background-color: #25d366; }
+        .whatsapp-2 { background-color: #128C7E; }
+
+        /* Footer */
+        footer {
+            background: #112512;
+            color: #A0AEC0;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.95rem;
+            border-top: 3px solid var(--secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.9rem; }
+            header p { font-size: 1.1rem; }
+            .btn { width: 100%; text-align: center; }
+            th, td { padding: 12px 10px; font-size: 0.9rem; }
+            .contact-box { width: calc(100% - 40px); left: 20px; }
+            .contact-btn { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- بنر معلومات الرحلات والموقع لزيادة المصداقية وثقة المستخدم -->
+    <div class="flight-banner">
+        ✈️ رحلات دورية متكررة كل يوم سبت ابتداءً من 21 جوان مع طيران فلاي ناس (flynas)<br>
+        📍 المقر الرئيسي: شارع السي لخضر، الأخضرية (ساريج بيكير)، مقابل محطة النقل الحضري أولاد المهدي، الطابق الأول.
+    </div>
+
+    <!-- قسم العنوان الرئيسي (Hero Section) مع حائط صورة مكة المكرمة خلفية برمجية -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <!-- هذا الكود يقرأ الشعار المحفوظ باسم logo.png في نفس مجلد الموقع -->
+                <img src="logo.png" alt="شعار وكالة الوثيق" class="logo-img" onerror="this.style.display='none';">
+                <div style="font-weight: 900; color: var(--secondary); font-size: 1.5rem; margin-top: 5px;">وكالة الوثيق للسياحة والأسفار</div>
+            </div>
+            <h1>عمرة مريحة بطمأنينة تامة في فندق رفاع السد بمكة</h1>
+            <p>تفرّغ للعبادة والدعاء، ودع لنا الترتيبات مع وكالة الوثيق بالأخضرية. نضمن لك إقامة مريحة في فندق رفاع السد المتميز وبرنامج مزارات كامل ومؤطر.</p>
+            <a href="#booking" class="btn">احجز مقعدك الآن واستعلم مجاناً</a>
+            <div class="trust-badge">🕋 رحلات مبرمجة كل سبت • تأطير وتوجيه ديني متميز طوال الرحلة</div>
+        </div>
+    </header>
+
+    <!-- قسم المميزات والفوائد مع حائط صورة المدينة المنورة خلفية برمجية -->
+    <section class="benefits">
+        <div class="container">
+            <h2>ما ستحصل عليه في رحلة وكالة الوثيق</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🕌</div>
+                    <h3>برنامج مزارات متكامل</h3>
+                    <p>جولات سياحية دينية مؤطرة ومريحة تشمل أهم المشاعر المقدسة والمعالم التاريخية في مكة والمدينة المنورة.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🏨</div>
+                    <h3>إقامة بفندق رفاع السد</h3>
+                    <p>فندق متميز بمكة المكرمة يوفر لك ولعائلتك غرفاً مجهزة ومريحة تضمن لك الراحة التامة بعد أداء المناسك.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">✈️</div>
+                    <h3>طيران فلاي ناس (flynas)</h3>
+                    <p>رحلات مباشرة ومريحة على متن خطوط فلاي ناس لضمان تجربة سفر سلسة وتوقيت دقيق ومريح.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم جدول الأسعار الرسمي والندرة -->
+    <section class="pricing-section container">
+        <h2>أسعار الباقات الرسمية لفندق رفاع السد</h2>
+        <p>اختر نوع الغرفة المناسب لك ولعائلتك بأسعار تنافسية واضحة ومحددة لرحلاتنا الصيفية</p>
+        
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>نوع الغرفة في مكة</th>
+                        <th>سعر الشخص الواحد</th>
+                        <th>حالة الحجز للرحلات القادمة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>غرفة ثنائية (شخصين)</strong></td>
+                        <td class="price-tag">249,000 د.ج</td>
+                        <td style="color: #25d366; font-weight: bold;">متاح للتسجيل</td>
+                    </tr>
+                    <tr>
+                        <td><strong>غرفة ثلاثية (3 أشخاص)</strong></td>
+                        <td class="price-tag">219,000 د.ج</td>
+                        <td style="color: #25d366; font-weight: bold;">متاح للتسجيل</td>
+                    </tr>
+                    <tr>
+                        <td><strong>غرفة رباعية (4 أشخاص)</strong></td>
+                        <td class="price-tag">199,000 د.ج</td>
+                        <td style="color: #dd6b20; font-weight: bold;">مقاعد محدودة</td>
+                    </tr>
+                    <tr>
+                        <td><strong>غرفة خماسية (5 أشخاص)</strong></td>
+                        <td class="price-tag">189,000 د.ج</td>
+                        <td style="color: #e53e3e; font-weight: bold;">أوشكت على النفاد</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="scarcity-box">
+            <h3>الأماكن محدودة لرحلة 21 جوان والأسابيع الأولى!</h3>
+            <p>ينتهي عرض حجز وتثبيت الأسعار الحالية عبر الموقع خلال:</p>
+            <div class="timer">
+                <div class="timer-part" id="seconds">00</div>
+                <div class="timer-part" id="minutes">00</div>
+                <div class="timer-part" id="hours">08</div>
+            </div>
+            <a href="#booking" class="btn" style="background-color: var(--secondary); color: var(--primary);">سجل الآن لضمان مقعدك والسعر الحالي</a>
+        </div>
+    </section>
+
+    <!-- نموذج الحجز الذكي - المحول مباشرة إلى واتساب الوكالة -->
+    <section class="booking-area" id="booking">
+        <div class="booking-form">
+            <h3>احجز مقعدك لتفتح دردشة الواتساب لتأكيد الحجز فوراً</h3>
+            <form onsubmit="event.preventDefault(); sendToWhatsApp();">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل للمسافر:</label>
+                    <input type="text" id="name" placeholder="اكتب اسمك كاملاً" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف البديل للاتصال:</label>
+                    <input type="tel" id="phone" placeholder="مثال: 0797010102" required>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">نوع الغرفة المطلوبة بمكة:</label>
+                    <select id="room-type">
+                        <option value="غرفة خماسية بـ 189,000 د.ج">غرفة خماسية (189,000 د.ج)</option>
+                        <option value="غرفة رباعية بـ 199,000 د.ج">غرفة رباعية (199,000 د.ج)</option>
+                        <option value="غرفة ثلاثية بـ 219,000 د.ج">غرفة ثلاثية (219,000 د.ج)</option>
+                        <option value="غرفة ثنائية بـ 249,000 د.ج">غرفة ثنائية (249,000 د.ج)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date-pref">تاريخ الرحلة المفضل:</label>
+                    <select id="date-pref">
+                        <option value="الرحلة الأولى يوم السبت 21 جوان">الرحلة الأولى (السبت 21 جوان)</option>
+                        <option value="الرحلات الدورية للأسابيع الموالية (أيام السبت)">أيام السبت القادمة (الرحلات الموالية)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 10px; background-color: #25d366; color: white;">✅ تأكيد الحجز وإرسال عبر الواتساب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="container faq">
+        <h2>أسئلة تهم معتمرينا بالأخضرية</h2>
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">ما هو برنامج المزارات والخرجات المشمول في الرحلة؟</div>
+            <div class="faq-answer">
+                برنامجنا حافل ويشمل جولات دينية منظمة وموجهة في كلا المدينتين:
+                <br><br>
+                <strong>🟢 في المدينة المنورة:</strong>
+                <ul class="ziyarat-list">
+                    <li>زيارة الصلاة في الروضة الشريفة.</li>
+                    <li>زيارة مسجد قباء (أول مسجد أُسس على التقوى).</li>
+                    <li>زيارة مقبرة شهداء أحد وجبل أحد التاريخي.</li>
+                    <li>جولة ممتعة في مزرعة التمور بالمدينة.</li>
+                </ul>
+                <br>
+                <strong>⚫ في مكة المكرمة:</strong>
+                <ul class="ziyarat-list">
+                    <li>زيارة جبل عرفة المبارك.</li>
+                    <li>جولة شاملة في المشاعر المقدسة (منى، مزدلفة، ومنطقة الجمرات).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">أين يقع مقر وكالة الوثيق بالأخضرية؟</div>
+            <div class="faq-answer">
+                يسعدنا استقبالكم لتسليم الوثائق وتثبيت الحجوزات في مقرنا الرسمي بالعنوان التالي:
+                <div class="location-highlight">
+                    📍 <strong>شارع السي لخضر، الأخضرية (ساريج بيكير)</strong> - مقابل محطة النقل الحضري أولاد المهدي، الطابق الأول.
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">ما هي الخدمات الإضافية التي يشملها هذا السعر؟</div>
+            <div class="faq-answer">السعر الموضح متكامل ويشمل: تذاكر الطيران مع شركة فلاي ناس، الإقامة في فندق رفاع السد بمكة المكرمة، تكاليف استخراج التأشيرة، والنقل الداخلي المريح بين المطارات والمناسك بالإضافة إلى برنامج المزارات المذكور أعلاه.</div>
+        </div>
+    </section>
+
+    <!-- أزرار التواصل العائمة بأسفل الشاشة (واتساب مباشر لأرقامك الفردية) -->
+    <div class="contact-box">
+        <a href="https://wa.me" class="contact-btn whatsapp-1" target="_blank">
+            💬 تواصل مع الرقم: 0797010102
+        </a>
+        <a href="https://wa.me" class="contact-btn whatsapp-2" target="_blank">
+            💬 تواصل مع الرقم: 0661157107
+        </a>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 وكالة الوثيق للسياحة والأسفار - الأخضرية. جميع الحقوق محفوظة.</p>
+            <p style="font-size:0.8rem; margin-top:8px; color: #718096;">صفحة هبوط معتمدة وآمنة 100% لتلقي طلبات المعتمرين للوكالة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // إظهار وإخفاء الأجوبة
+        function toggleFaq(element) {
+            const answer = element.querySelector('.faq-answer');
+            answer.style.display = (answer.style.display === "block") ? "none" : "block";
+        }
+
+        // عداد تنازلي ذكي للندرة التسويقية (8 ساعات متجددة تلقائياً)
+        let totalSeconds = 8 * 60 * 60;
+        const hrElement = document.getElementById('hours');
+        const minElement = document.getElementById('minutes');
+        const secElement = document.getElementById('seconds');
+
+        function updateTimer() {
+            if (totalSeconds <= 0) { totalSeconds = 8 * 60 * 60; }
+            totalSeconds--;
+            let hrs = Math.floor(totalSeconds / 3600);
+            let mins = Math.floor((totalSeconds % 3600) / 60);
+            let secs = totalSeconds % 60;
+
+            hrElement.textContent = String(hrs).padStart(2, '0');
+            minElement.textContent = String(mins).padStart(2, '0');
+            secElement.textContent = String(secs).padStart(2, '0');
+        }
+        setInterval(updateTimer, 1000);
+
+        // النظام البرمجي الذكي الجديد لإرسال تفاصيل الزبون مباشرة إلى واتساب الخاص بك
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const roomType = document.getElementById('room-type').value;
+            const datePref = document.getElementById('date-pref').value;
+
+            // تجهيز نص رسالة احترافي يصلك مباشرة للواتساب
+            const message = `مرحباً وكالة الوثيق بالأخضرية، أود حجز رحلة العمرة عبر الموقع.\n\n` +
+                            `👤 الاسم الكامل: ${name}\n` +
+                            `📞 الهاتف البديل: ${phone}\n` +
+                            `🏨 نوع الغرفة المطلوبة: ${roomType}\n` +
+                            `🗓️ موعد السفر المفضل: ${datePref}`;
+
+            // تحويل النص لترميز متوافق مع الروابط الإلكترونية
+            const encodedMessage = encodeURIComponent(message);
+            
+            // الرقم الرئيسي الأول للوكالة الذي يستلم الحجوزات التلقائية (يمكن تبديله للرقم الثاني لو رغبت)
+            const whatsappNumber = "213797010102"; 
+            
+            // فتح صفحة الواتساب للزبون تلقائياً بالبيانات المكتوبة
+            window.open(`https://wa.me{whatsappNumber}?text=${encodedMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>
