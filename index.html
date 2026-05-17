@@ -619,24 +619,28 @@
             const roomType = document.getElementById('room-type').value;
             const datePref = document.getElementById('date-pref').value;
 
-            // تجهيز نص رسالة احترافي يصلك مباشرة للواتساب
-            const message = `مرحباً وكالة الوثيق بالأخضرية، أود حجز رحلة العمرة عبر الموقع.\n\n` +
-                            `👤 الاسم الكامل: ${name}\n` +
-                            `📞 الهاتف البديل: ${phone}\n` +
-                            `🏨 نوع الغرفة المطلوبة: ${roomType}\n` +
-                            `🗓️ موعد السفر المفضل: ${datePref}`;
+           function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var roomType = document.getElementById("room-type").value;
+    var datePref = document.getElementById("date-pref").value;
 
-            // تحويل النص لترميز متوافق مع الروابط الإلكترونية
-            const encodedMessage = encodeURIComponent(message);
-            
-// الرقم الرئيسي الأول للوكالة (تم تعديله لتفادي مشاكل الحظر الدولي)
-const whatsappNumber = "213797010102"; 
+    // صياغة رسالة واضحة وبسيطة جداً متوافقة مع المتصفحات القديمة والحديثة
+    var message = "مرحباً وكالة الوثيق، أود حجز رحلة العمرة:\n\n" +
+                  "👤 الاسم الكامل: " + name + "\n" +
+                  "📞 الهاتف: " + phone + "\n" +
+                  "🏨 نوع الغرفة: " + roomType + "\n" +
+                  "🗓️ موعد السفر: " + datePref;
 
-// رابط ذكي يدعم التطبيق المباشر والموقع على حد سواء
-const whatsappURL = "https://whatsapp.com" + whatsappNumber + "&text=" + encodedMessage;
+    // تحويل الرسالة إلى صيغة روابط إنترنت آمنة
+    var encodedMessage = encodeURIComponent(message);
+    
+    // رابط الواتساب العالمي الثابت
+    var whatsappURL = "https://wa.me" + encodedMessage;
 
-// التحويل المباشر في نفس النافذة لمنع المتصفح من حظر الصفحة
-window.location.href = whatsappURL;
+    // فتح الرابط فوراً في نفس الصفحة لضمان عدم حظره من طرف المتصفح
+    window.location.href = whatsappURL;
+}
         }
     </script>
 </body>
