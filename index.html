@@ -512,32 +512,33 @@
         <div class="container">
             <div class="booking-form">
                 <h3>استمارة الحجز المبدئي</h3>
+                <!-- تم تصحيح صياغة الأسماء هنا لتطابق بروتوكول Formspree بدقة وتفادي الـ Method Unsupported -->
                 <form action="https://formspree.io" method="POST">
                     <div class="form-group">
                         <label for="name">الاسم الكامل:</label>
-                        <input type="text" id="name" name="الاسم الكامل" required placeholder="أدخل اسمك الثلاثي">
+                        <input type="text" id="name" name="name" required placeholder="أدخل اسمك الثلاثي">
                     </div>
                     <div class="form-group">
                         <label for="phone">رقم الهاتف:</label>
-                        <input type="tel" id="phone" name="رقم الهاتف" required placeholder="05xxxxxxxx">
+                        <input type="tel" id="phone" name="phone" required placeholder="05xxxxxxxx">
                     </div>
                     <div class="form-group">
                         <label for="hotel">اختر الفندق المفضل لبرنامج إقامتك:</label>
-                        <select id="hotel" name="الفندق المختار" required>
+                        <select id="hotel" name="hotel" required>
                             <option value="" disabled selected>-- اختر الفندق --</option>
-                            <option value="فندق إشراق أجياد (250 متر)">فندق إشراق أجياد (250 متر عن الحرم)</option>
-                            <option value="فندق فجر النسك (500 متر)">فندق فجر النسك (500 متر عن الحرم)</option>
-                            <option value="فندق رفاع السد (900 متر)">فندق رفاع السد مكة (900 متر عن الحرم)</option>
+                            <option value="ashraq_250m">فندق إشراق أجياد (250 متر عن الحرم)</option>
+                            <option value="fajr_500m">فندق فجر النسك (500 متر عن الحرم)</option>
+                            <option value="refaa_900m">فندق رفاع السد مكة (900 متر عن الحرم)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="room">نوع الغرفة المطلوبة:</label>
-                        <select id="room" name="نوع الغرفة" required>
+                        <select id="room" name="room" required>
                             <option value="" disabled selected>-- اختر نوع الغرفة --</option>
-                            <option value="غرفة ثنائية">غرفة ثنائية</option>
-                            <option value="غرفة ثلاثية">غرفة ثلاثية</option>
-                            <option value="غرفة رباعية">غرفة رباعية</option>
-                            <option value="غرفة خماسية">غرفة خماسية</option>
+                            <option value="double">غرفة ثنائية</option>
+                            <option value="triple">غرفة ثلاثية</option>
+                            <option value="quad">غرفة رباعية</option>
+                            <option value="quint">غرفة خماسية</option>
                         </select>
                     </div>
                     <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">تأكيد طلب الحجز</button>
