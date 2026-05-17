@@ -512,8 +512,8 @@
         <div class="container">
             <div class="booking-form">
                 <h3>استمارة الحجز المبدئي</h3>
-                <!-- تم تصحيح صياغة الأسماء هنا لتطابق بروتوكول Formspree بدقة وتفادي الـ Method Unsupported -->
-                <form action="https://formspree.io" method="POST">
+                <!-- استخدام طريقة POST القياسية المباشرة لتخطي مشكلة CORS والـ Method Unsupported -->
+                <form action="https://formspree.io/f/mredzodw" method="POST">
                     <div class="form-group">
                         <label for="name">الاسم الكامل:</label>
                         <input type="text" id="name" name="name" required placeholder="أدخل اسمك الثلاثي">
