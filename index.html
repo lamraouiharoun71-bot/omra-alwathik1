@@ -7,22 +7,13 @@
     <!-- Google Fonts: Tajawal -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- أدوات التتبع والتحليلات (Google Analytics & Meta Pixel) -->
-    <script>
-      console.log("Google Analytics نشط - وكالة الوثيق الأخضرية");
-    </script>
-    <script>
-      console.log("Meta Pixel جاهز لتتبع حملات فيسبوك وإنستغرام");
-    </script>
+    <link href="https://googleapis.com/css2?family=Tajawal:wght=400;500;700;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #1E4620; /* أخضر إسلامي وقور متناسق مع الشعار */
-            --secondary: #D4AF37; /* ذهبي هادئ */
-            --orange-logo: #FF6B00; /* برتقالي الشعار المتناسق */
-            --bg-light: #FAF9F6; /* أبيض كريمي مريح للعين */
+            --primary: #1E4620; 
+            --secondary: #D4AF37; 
+            --bg-light: #FAF9F6; 
             --text-dark: #2D3748;
             --white: #FFFFFF;
         }
@@ -46,7 +37,6 @@
             margin: 0 auto;
         }
 
-        /* Flight & Location Info Banner */
         .flight-banner {
             background-color: #FFFEEF;
             border-bottom: 2px solid var(--secondary);
@@ -58,10 +48,9 @@
             line-height: 1.5;
         }
 
-        /* Hero Section with Mecca Background */
         header {
             background: linear-gradient(rgba(30, 70, 32, 0.88), rgba(20, 40, 22, 0.92)), 
-                        url(makkah.jpg) no-repeat center center/cover;
+                        url('makkah.jpg') no-repeat center center/cover;
             color: var(--white);
             padding: 70px 0;
             text-align: center;
@@ -109,6 +98,7 @@
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
             border: none;
             cursor: pointer;
+            text-align: center;
         }
 
         .btn:hover {
@@ -122,12 +112,11 @@
             color: #CBD5E1;
         }
 
-        /* Benefits Section with Madinah Background */
         .benefits {
             padding: 80px 0;
             text-align: center;
             background: linear-gradient(rgba(250, 249, 246, 0.92), rgba(250, 249, 246, 0.95)), 
-                        url(madinah.jpg) no-repeat center center/cover;
+                        url('madinah.jpg') no-repeat center center/cover;
         }
 
         .benefits h2 {
@@ -149,11 +138,6 @@
             border-radius: 12px;
             border-top: 4px solid var(--primary);
             box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
         }
 
         .card .icon {
@@ -167,7 +151,6 @@
             font-size: 1.35rem;
         }
 
-        /* Pricing Table Section */
         .pricing-section {
             padding: 70px 0;
             text-align: center;
@@ -204,10 +187,6 @@
             font-size: 1.1rem;
         }
 
-        tr:last-child td {
-            border-bottom: none;
-        }
-
         tr:nth-child(even) {
             background-color: var(--bg-light);
         }
@@ -218,7 +197,6 @@
             font-size: 1.2rem;
         }
 
-        /* Scarcity Box */
         .scarcity-box {
             background: linear-gradient(135deg, #153216 0%, var(--primary) 100%);
             color: var(--white);
@@ -247,7 +225,6 @@
             min-width: 65px;
         }
 
-        /* Booking Form */
         .booking-area {
             background-color: var(--bg-light);
             padding: 70px 0;
@@ -288,7 +265,6 @@
             font-size: 1rem;
         }
 
-        /* FAQ Section */
         .faq {
             padding: 70px 0;
         }
@@ -328,7 +304,6 @@
             padding: 12px;
             margin-top: 10px;
             border-radius: 4px;
-            font-size: 0.95rem;
         }
 
         .ziyarat-list {
@@ -341,7 +316,6 @@
             list-style-type: square;
         }
 
-        /* Floating Contact Buttons */
         .contact-box {
             position: fixed;
             bottom: 20px;
@@ -364,17 +338,11 @@
             align-items: center;
             gap: 8px;
             font-size: 0.95rem;
-            transition: transform 0.2s;
-        }
-
-        .contact-btn:hover {
-            transform: scale(1.03);
         }
 
         .whatsapp-1 { background-color: #25d366; }
         .whatsapp-2 { background-color: #128C7E; }
 
-        /* Footer */
         footer {
             background: #112512;
             color: #A0AEC0;
@@ -384,12 +352,9 @@
             border-top: 3px solid var(--secondary);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             header h1 { font-size: 1.9rem; }
-            header p { font-size: 1.1rem; }
-            .btn { width: 100%; text-align: center; }
-            th, td { padding: 12px 10px; font-size: 0.9rem; }
+            .btn { width: 100%; }
             .contact-box { width: calc(100% - 40px); left: 20px; }
             .contact-btn { justify-content: center; }
         }
@@ -397,17 +362,14 @@
 </head>
 <body>
 
-    <!-- بنر معلومات الرحلات والموقع لزيادة المصداقية وثقة المستخدم -->
     <div class="flight-banner">
         ✈️ رحلات دورية متكررة كل يوم سبت ابتداءً من 21 جوان مع طيران فلاي ناس (flynas)<br>
         📍 المقر الرئيسي: شارع السي لخضر، الأخضرية (ساريج بيكير)، مقابل محطة النقل الحضري أولاد المهدي، الطابق الأول.
     </div>
 
-    <!-- قسم العنوان الرئيسي (Hero Section) مع حائط صورة مكة المكرمة خلفية برمجية -->
     <header>
         <div class="container">
             <div class="logo-container">
-                <!-- هذا الكود يقرأ الشعار المحفوظ باسم logo.png في نفس مجلد الموقع -->
                 <img src="logo.png" alt="شعار وكالة الوثيق" class="logo-img" onerror="this.style.display='none';">
                 <div style="font-weight: 900; color: var(--secondary); font-size: 1.5rem; margin-top: 5px;">وكالة الوثيق للسياحة والأسفار</div>
             </div>
@@ -418,7 +380,6 @@
         </div>
     </header>
 
-    <!-- قسم المميزات والفوائد مع حائط صورة المدينة المنورة خلفية برمجية -->
     <section class="benefits">
         <div class="container">
             <h2>ما ستحصل عليه في رحلة وكالة الوثيق</h2>
@@ -442,7 +403,6 @@
         </div>
     </section>
 
-    <!-- قسم جدول الأسعار الرسمي والندرة -->
     <section class="pricing-section container">
         <h2>أسعار الباقات الرسمية لفندق رفاع السد</h2>
         <p>اختر نوع الغرفة المناسب لك ولعائلتك بأسعار تنافسية واضحة ومحددة لرحلاتنا الصيفية</p>
@@ -493,61 +453,60 @@
         </div>
     </section>
 
-    <!-- نموذج الحجز الذكي - المحول مباشرة إلى واتساب الوكالة -->
+    <!-- تم إعادة صياغة هذا القسم ليعمل ميكانيكياً ومباشرة بدون تعقيد برميجي يتجمد -->
     <section class="booking-area" id="booking">
         <div class="booking-form">
-            <h3>احجز مقعدك لتفتح دردشة الواتساب لتأكيد الحجز فوراً</h3>
+            <h3>اضغط لتأكيد الحجز ومشاركة البيانات عبر الواتساب</h3>
             <form onsubmit="event.preventDefault(); sendToWhatsApp();">
                 <div class="form-group">
                     <label for="name">الاسم الكامل للمسافر:</label>
                     <input type="text" id="name" placeholder="اكتب اسمك كاملاً" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">رقم الهاتف البديل للاتصال:</label>
+                    <label for="phone">رقم الهاتف للاتصال:</label>
                     <input type="tel" id="phone" placeholder="مثال: 0797010102" required>
                 </div>
                 <div class="form-group">
                     <label for="room-type">نوع الغرفة المطلوبة بمكة:</label>
                     <select id="room-type">
-                        <option value="غرفة خماسية بـ 189,000 د.ج">غرفة خماسية (189,000 د.ج)</option>
-                        <option value="غرفة رباعية بـ 199,000 د.ج">غرفة رباعية (199,000 د.ج)</option>
-                        <option value="غرفة ثلاثية بـ 219,000 د.ج">غرفة ثلاثية (219,000 د.ج)</option>
-                        <option value="غرفة ثنائية بـ 249,000 د.ج">غرفة ثنائية (249,000 د.ج)</option>
+                        <option value="خماسية (189,000 د.ج)">غرفة خماسية (189,000 د.ج)</option>
+                        <option value="رباعية (199,000 د.ج)">غرفة رباعية (199,000 د.ج)</option>
+                        <option value="ثلاثية (219,000 د.ج)">غرفة ثلاثية (219,000 د.ج)</option>
+                        <option value="ثنائية (249,000 د.ج)">غرفة ثنائية (249,000 د.ج)</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="date-pref">تاريخ الرحلة المفضل:</label>
                     <select id="date-pref">
-                        <option value="الرحلة الأولى يوم السبت 21 جوان">الرحلة الأولى (السبت 21 جوان)</option>
-                        <option value="الرحلات الدورية للأسابيع الموالية (أيام السبت)">أيام السبت القادمة (الرحلات الموالية)</option>
+                        <option value="السبت 21 جوان">الرحلة الأولى (السبت 21 جوان)</option>
+                        <option value="الرحلات الموالية">أيام السبت القادمة (الرحلات الموالية)</option>
                     </select>
                 </div>
-                <button type="submit" class="btn" style="width: 100%; margin-top: 10px; background-color: #25d366; color: white;">✅ تأكيد الحجز وإرسال عبر الواتساب</button>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 10px; background-color: #25d366; color: white;">✅ إرسال الطلب عبر الواتساب</button>
             </form>
         </div>
     </section>
 
-    <!-- قسم الأسئلة الشائعة -->
     <section class="container faq">
         <h2>أسئلة تهم معتمرينا بالأخضرية</h2>
         
         <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">ما هو برنامج المزارات والخرجات المشمول في الرحلة؟</div>
+            <div class="faq-question">ما هو برنامج المزارات والخرجات المشمول في الرحلة?</div>
             <div class="faq-answer">
                 برنامجنا حافل ويشمل جولات دينية منظمة وموجهة في كلا المدينتين:
                 <br><br>
                 <strong>🟢 في المدينة المنورة:</strong>
                 <ul class="ziyarat-list">
                     <li>زيارة الصلاة في الروضة الشريفة.</li>
-                    <li>زيارة مسجد قباء (أول مسجد أُسس على التقوى).</li>
-                    <li>زيارة مقبرة شهداء أحد وجبل أحد التاريخي.</li>
-                    <li>جولة ممتعة في مزرعة التمور بالمدينة.</li>
+                    <li>زيارة مسجد قباء.</li>
+                    <li>زيارة مقبرة شهداء أحد وجبل أحد.</li>
+                    <li>جولة في مزرعة التمور بالمدينة.</li>
                 </ul>
                 <br>
                 <strong>⚫ في مكة المكرمة:</strong>
                 <ul class="ziyarat-list">
                     <li>زيارة جبل عرفة المبارك.</li>
-                    <li>جولة شاملة في المشاعر المقدسة (منى، مزدلفة، ومنطقة الجمرات).</li>
+                    <li>جولة في المشاعر المقدسة (منى، مزدلفة، والجمرات).</li>
                 </ul>
             </div>
         </div>
@@ -555,56 +514,42 @@
         <div class="faq-item" onclick="toggleFaq(this)">
             <div class="faq-question">أين يقع مقر وكالة الوثيق بالأخضرية؟</div>
             <div class="faq-answer">
-                يسعدنا استقبالكم لتسليم الوثائق وتثبيت الحجوزات في مقرنا الرسمي بالعنوان التالي:
+                يسعدنا استقبالكم في مقرنا الرسمي بالعنوان التالي:
                 <div class="location-highlight">
                     📍 <strong>شارع السي لخضر، الأخضرية (ساريج بيكير)</strong> - مقابل محطة النقل الحضري أولاد المهدي، الطابق الأول.
                 </div>
             </div>
         </div>
-        
-        <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">ما هي الخدمات الإضافية التي يشملها هذا السعر؟</div>
-            <div class="faq-answer">السعر الموضح متكامل ويشمل: تذاكر الطيران مع شركة فلاي ناس، الإقامة في فندق رفاع السد بمكة المكرمة، تكاليف استخراج التأشيرة، والنقل الداخلي المريح بين المطارات والمناسك بالإضافة إلى برنامج المزارات المذكور أعلاه.</div>
-        </div>
     </section>
 
-    <!-- أزرار التواصل العائمة بأسفل الشاشة (واتساب مباشر لأرقامك الفردية) -->
     <div class="contact-box">
-        <a href="https://wa.me" class="contact-btn whatsapp-1" target="_blank">
-            💬 تواصل مع الرقم: 0797010102
-        </a>
-        <a href="https://wa.me" class="contact-btn whatsapp-2" target="_blank">
-            💬 تواصل مع الرقم: 0661157107
-        </a>
+        <a href="https://wa.me" class="contact-btn whatsapp-1" target="_blank">💬 0797010102</a>
+        <a href="https://wa.me" class="contact-btn whatsapp-2" target="_blank">💬 0661157107</a>
     </div>
 
-    <!-- الفوتر -->
     <footer>
         <div class="container">
             <p>&copy; 2026 وكالة الوثيق للسياحة والأسفار - الأخضرية. جميع الحقوق محفوظة.</p>
-            <p style="font-size:0.8rem; margin-top:8px; color: #718096;">صفحة هبوط معتمدة وآمنة 100% لتلقي طلبات المعتمرين للوكالة.</p>
         </div>
     </footer>
 
     <script>
-        // إظهار وإخفاء الأجوبة
         function toggleFaq(element) {
-            const answer = element.querySelector('.faq-answer');
+            var answer = element.querySelector('.faq-answer');
             answer.style.display = (answer.style.display === "block") ? "none" : "block";
         }
 
-        // عداد تنازلي ذكي للندرة التسويقية (8 ساعات متجددة تلقائياً)
-        let totalSeconds = 8 * 60 * 60;
-        const hrElement = document.getElementById('hours');
-        const minElement = document.getElementById('minutes');
-        const secElement = document.getElementById('seconds');
+        var totalSeconds = 8 * 60 * 60;
+        var hrElement = document.getElementById('hours');
+        var minElement = document.getElementById('minutes');
+        var secElement = document.getElementById('seconds');
 
         function updateTimer() {
             if (totalSeconds <= 0) { totalSeconds = 8 * 60 * 60; }
             totalSeconds--;
-            let hrs = Math.floor(totalSeconds / 3600);
-            let mins = Math.floor((totalSeconds % 3600) / 60);
-            let secs = totalSeconds % 60;
+            var hrs = Math.floor(totalSeconds / 3600);
+            var mins = Math.floor((totalSeconds % 3600) / 60);
+            var secs = totalSeconds % 60;
 
             hrElement.textContent = String(hrs).padStart(2, '0');
             minElement.textContent = String(mins).padStart(2, '0');
@@ -612,35 +557,21 @@
         }
         setInterval(updateTimer, 1000);
 
-        // النظام البرمجي الذكي الجديد لإرسال تفاصيل الزبون مباشرة إلى واتساب الخاص بك
+        // تعديل شامل وآمن للتوافق التام مع المتصفحات
         function sendToWhatsApp() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const roomType = document.getElementById('room-type').value;
-            const datePref = document.getElementById('date-pref').value;
+            var inputName = document.getElementById("name").value;
+            var inputPhone = document.getElementById("phone").value;
+            var inputRoom = document.getElementById("room-type").value;
+            var inputDate = document.getElementById("date-pref").value;
 
-           function sendToWhatsApp() {
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var roomType = document.getElementById("room-type").value;
-    var datePref = document.getElementById("date-pref").value;
+            var fullText = "مرحباً وكالة الوثيق، أود حجز عمرة:\n" +
+                           "الاسم: " + inputName + "\n" +
+                           "الهاتف: " + inputPhone + "\n" +
+                           "الغرفة: " + inputRoom + "\n" +
+                           "الرحلة: " + inputDate;
 
-    // صياغة رسالة واضحة وبسيطة جداً متوافقة مع المتصفحات القديمة والحديثة
-    var message = "مرحباً وكالة الوثيق، أود حجز رحلة العمرة:\n\n" +
-                  "👤 الاسم الكامل: " + name + "\n" +
-                  "📞 الهاتف: " + phone + "\n" +
-                  "🏨 نوع الغرفة: " + roomType + "\n" +
-                  "🗓️ موعد السفر: " + datePref;
-
-    // تحويل الرسالة إلى صيغة روابط إنترنت آمنة
-    var encodedMessage = encodeURIComponent(message);
-    
-    // رابط الواتساب العالمي الثابت
-    var whatsappURL = "https://wa.me" + encodedMessage;
-
-    // فتح الرابط فوراً في نفس الصفحة لضمان عدم حظره من طرف المتصفح
-    window.location.href = whatsappURL;
-}
+            var finalLink = "https://wa.me?text=" + encodeURIComponent(fullText);
+            window.location.href = finalLink;
         }
     </script>
 </body>
