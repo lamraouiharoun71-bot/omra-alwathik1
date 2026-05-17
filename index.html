@@ -333,21 +333,36 @@
             border-top: 3px solid var(--secondary);
         }
 
+        /* تعديل صندوق أرقام الهاتف ليكون ثابتاً في أسفل الشاشة */
         .contact-box {
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background-color: #25D366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 12px 25px;
+            border-radius: 30px;
             font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            direction: ltr;
+            text-align: center;
+            border: 2px solid var(--white);
+        }
+
+        .contact-box span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-bottom: 2px;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .contact-box a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: inline-block;
         }
     </style>
 </head>
@@ -516,9 +531,11 @@
         </div>
     </footer>
 
-    <a href="https://wa.me" class="contact-box" target="_blank">
-        💬 تواصل معنا عبر واتساب
-    </a>
+    <!-- صندوق أرقام الهاتف الفعلي للوكالة بدلاً من الواتساب -->
+    <div class="contact-box">
+        <span>📞 اتصل بنا للاستفسار:</span>
+        <a href="tel:0555123456">0555 12 34 56</a>
+    </div>
 
     <script>
         // تفعيل قائمة الأسئلة الشائعة (FAQ)
