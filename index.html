@@ -29,7 +29,6 @@
             background-color: var(--white);
             color: var(--text-dark);
             line-height: 1.7;
-            padding-bottom: 80px; /* مساحة إضافية لكي لا يغطي صندوق الاتصال أي محتوى */
         }
 
         .container {
@@ -334,53 +333,71 @@
             border-top: 3px solid var(--secondary);
         }
 
-        /* صندوق أرقام الهواتف الثابت والمحدث لشاشات الموبايل والحاسوب */
-        .contact-box {
+        /* تنسيق أيقونة الاتصال العائمة والخيارات المنسدلة */
+        .phone-wrapper {
             position: fixed;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 25px;
+            left: 25px;
+            z-index: 1000;
+        }
+
+        .phone-trigger {
             background-color: var(--secondary);
             color: var(--primary);
-            padding: 12px 25px;
-            border-radius: 15px;
-            font-weight: bold;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            z-index: 1000;
-            text-align: center;
-            border: 2px solid var(--white);
-            width: 90%;
-            max-width: 500px;
-        }
-
-        .contact-box span {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--primary);
-            margin-bottom: 5px;
-            font-family: 'Tajawal', sans-serif;
-        }
-
-        .phone-links {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            direction: ltr;
+            font-size: 1.7rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 2px solid var(--white);
+            transition: transform 0.2s;
         }
 
-        .phone-links a {
+        .phone-trigger:hover {
+            transform: scale(1.05);
+        }
+
+        .phone-dropdown {
+            position: absolute;
+            bottom: 75px;
+            left: 0;
+            background-color: var(--white);
+            border: 2px solid var(--secondary);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 180px;
+            display: none; /* مخفي افتراضياً ويظهر بالجافا سكريبت */
+            animation: fadeInUp 0.3s ease;
+        }
+
+        .phone-dropdown a {
+            display: block;
+            padding: 12px 15px;
             color: var(--primary);
             text-decoration: none;
+            font-weight: bold;
             font-size: 1rem;
-            background: rgba(255,255,255,0.5);
-            padding: 4px 10px;
-            border-radius: 6px;
-            transition: background 0.2s;
+            text-align: center;
+            direction: ltr;
+            border-bottom: 1px solid #E2E8F0;
         }
 
-        .phone-links a:hover {
-            background: var(--white);
+        .phone-dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .phone-dropdown a:hover {
+            background-color: var(--bg-light);
+            color: #C5A028;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -495,32 +512,32 @@
         <div class="container">
             <div class="booking-form">
                 <h3>استمارة الحجز المبدئي</h3>
-                <form action="#" method="POST">
+                <form action="https://formspree.io" method="POST">
                     <div class="form-group">
                         <label for="name">الاسم الكامل:</label>
-                        <input type="text" id="name" name="name" required placeholder="أدخل اسمك الثلاثي">
+                        <input type="text" id="name" name="الاسم الكامل" required placeholder="أدخل اسمك الثلاثي">
                     </div>
                     <div class="form-group">
                         <label for="phone">رقم الهاتف:</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="05xxxxxxxx">
+                        <input type="tel" id="phone" name="رقم الهاتف" required placeholder="05xxxxxxxx">
                     </div>
                     <div class="form-group">
                         <label for="hotel">اختر الفندق المفضل لبرنامج إقامتك:</label>
-                        <select id="hotel" name="hotel" required>
+                        <select id="hotel" name="الفندق المختار" required>
                             <option value="" disabled selected>-- اختر الفندق --</option>
-                            <option value="ashraq">فندق إشراق أجياد (250 متر عن الحرم)</option>
-                            <option value="fajr">فندق فجر النسك (500 متر عن الحرم)</option>
-                            <option value="refaa">فندق رفاع السد مكة (900 متر عن الحرم)</option>
+                            <option value="فندق إشراق أجياد (250 متر)">فندق إشراق أجياد (250 متر عن الحرم)</option>
+                            <option value="فندق فجر النسك (500 متر)">فندق فجر النسك (500 متر عن الحرم)</option>
+                            <option value="فندق رفاع السد (900 متر)">فندق رفاع السد مكة (900 متر عن الحرم)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="room">نوع الغرفة المطلوبة:</label>
-                        <select id="room" name="room" required>
+                        <select id="room" name="نوع الغرفة" required>
                             <option value="" disabled selected>-- اختر نوع الغرفة --</option>
-                            <option value="2">غرفة ثنائية</option>
-                            <option value="3">غرفة ثلاثية</option>
-                            <option value="4">غرفة رباعية</option>
-                            <option value="5">غرفة خماسية</option>
+                            <option value="غرفة ثنائية">غرفة ثنائية</option>
+                            <option value="غرفة ثلاثية">غرفة ثلاثية</option>
+                            <option value="غرفة رباعية">غرفة رباعية</option>
+                            <option value="غرفة خماسية">غرفة خماسية</option>
                         </select>
                     </div>
                     <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">تأكيد طلب الحجز</button>
@@ -549,10 +566,10 @@
         </div>
     </footer>
 
-    <!-- صندوق الاتصال بالهواتف الثلاثة الخاصة بالوكالة -->
-    <div class="contact-box">
-        <span>📞 اتصل بنا مباشرة للاستفسار والحجز:</span>
-        <div class="phone-links">
+    <!-- عنصر أيقونة الاتصال العائمة مع القائمة المنسدلة للأرقام الثلاثة -->
+    <div class="phone-wrapper">
+        <div class="phone-trigger" id="phoneTrigger">📞</div>
+        <div class="phone-dropdown" id="phoneDropdown">
             <a href="tel:0797010102">0797 01 01 02</a>
             <a href="tel:0661157107">0661 15 71 07</a>
             <a href="tel:0553705616">0553 70 56 16</a>
@@ -560,7 +577,20 @@
     </div>
 
     <script>
-        // تفعيل قائمة الأسئلة الشائعة (FAQ)
+        // فتح وإغلاق قائمة الأرقام المنسدلة عند الضغط على أيقونة الاتصال
+        const trigger = document.getElementById('phoneTrigger');
+        const dropdown = document.getElementById('phoneDropdown');
+
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // إغلاق القائمة عند الضغط في أي مكان خارجها داخل الصفحة
+        document.addEventListener('click', () => {
+            dropdown.style.display = 'none';
+        });
+
         document.querySelectorAll('.faq-item').forEach(item => {
             item.addEventListener('click', () => {
                 const answer = item.querySelector('.faq-answer');
@@ -568,7 +598,6 @@
             });
         });
 
-        // تفعيل عداد تنازلي وهمي للتسويق (24 ساعة ويتكرر)
         let hours = 23, minutes = 59, seconds = 59;
         const timer = setInterval(() => {
             seconds--;
