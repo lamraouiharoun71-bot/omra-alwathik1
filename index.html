@@ -7,7 +7,7 @@
     <!-- Google Fonts: Tajawal -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Tajawal:wght=400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -340,7 +340,7 @@
             font-size: 0.95rem;
         }
 
-        .whatsapp-1 { background-color: #25d366; }
+        .phone-color { background-color: #007bff; }
         .whatsapp-2 { background-color: #128C7E; }
 
         footer {
@@ -453,36 +453,37 @@
         </div>
     </section>
 
-    <!-- تم إعادة صياغة هذا القسم ليعمل ميكانيكياً ومباشرة بدون تعقيد برميجي يتجمد -->
+    <!-- تم إدخال رابط فورم سبري الخاص بوكالتك هنا ليعمل الإرسال فورا وبثبات -->
     <section class="booking-area" id="booking">
         <div class="booking-form">
-            <h3>اضغط لتأكيد الحجز ومشاركة البيانات عبر الواتساب</h3>
-            <form onsubmit="event.preventDefault(); sendToWhatsApp();">
+            <h3>سجل بياناتك وسيتم التواصل معك هاتفياً فوراً</h3>
+            
+            <form action="https://formspree.io/f/mredzodw" method="POST">
                 <div class="form-group">
                     <label for="name">الاسم الكامل للمسافر:</label>
-                    <input type="text" id="name" placeholder="اكتب اسمك كاملاً" required>
+                    <input type="text" name="الاسم الكامل" id="name" placeholder="اكتب اسمك كاملاً" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">رقم الهاتف للاتصال:</label>
-                    <input type="tel" id="phone" placeholder="مثال: 0797010102" required>
+                    <label for="phone">رقم الهاتف للاتصال للوكالة:</label>
+                    <input type="tel" name="رقم الهاتف" id="phone" placeholder="مثال: 0797010102" required>
                 </div>
                 <div class="form-group">
                     <label for="room-type">نوع الغرفة المطلوبة بمكة:</label>
-                    <select id="room-type">
-                        <option value="خماسية (189,000 د.ج)">غرفة خماسية (189,000 د.ج)</option>
-                        <option value="رباعية (199,000 د.ج)">غرفة رباعية (199,000 د.ج)</option>
-                        <option value="ثلاثية (219,000 د.ج)">غرفة ثلاثية (219,000 د.ج)</option>
-                        <option value="ثنائية (249,000 د.ج)">غرفة ثنائية (249,000 د.ج)</option>
+                    <select name="نوع الغرفة المفضلة" id="room-type">
+                        <option value="غرفة خماسية (189,000 د.ج)">غرفة خماسية (189,000 د.ج)</option>
+                        <option value="غرفة رباعية (199,000 د.ج)">غرفة رباعية (199,000 د.ج)</option>
+                        <option value="غرفة ثلاثية (219,000 د.ج)">غرفة ثلاثية (219,000 د.ج)</option>
+                        <option value="غرفة ثنائية (249,000 د.ج)">غرفة ثنائية (249,000 د.ج)</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="date-pref">تاريخ الرحلة المفضل:</label>
-                    <select id="date-pref">
+                    <select name="تاريخ الرحلة المفضل" id="date-pref">
                         <option value="السبت 21 جوان">الرحلة الأولى (السبت 21 جوان)</option>
                         <option value="الرحلات الموالية">أيام السبت القادمة (الرحلات الموالية)</option>
                     </select>
                 </div>
-                <button type="submit" class="btn" style="width: 100%; margin-top: 10px; background-color: #25d366; color: white;">✅ إرسال الطلب عبر الواتساب</button>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 10px; background-color: var(--primary); color: white;">إرسال الحجز للوكالة</button>
             </form>
         </div>
     </section>
@@ -491,7 +492,7 @@
         <h2>أسئلة تهم معتمرينا بالأخضرية</h2>
         
         <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">ما هو برنامج المزارات والخرجات المشمول في الرحلة?</div>
+            <div class="faq-question">ما هو برنامج المزارات والخرجات المشمول في الرحلة؟</div>
             <div class="faq-answer">
                 برنامجنا حافل ويشمل جولات دينية منظمة وموجهة في كلا المدينتين:
                 <br><br>
@@ -522,9 +523,10 @@
         </div>
     </section>
 
+    <!-- أزرار اتصال هاتفي مباشر لراحة بال الزبائن وسرعة التواصل -->
     <div class="contact-box">
-        <a href="https://wa.me" class="contact-btn whatsapp-1" target="_blank">💬 0797010102</a>
-        <a href="https://wa.me" class="contact-btn whatsapp-2" target="_blank">💬 0661157107</a>
+        <a href="tel:0797010102" class="contact-btn phone-color">📞 اتصل بنا: 0797010102</a>
+        <a href="tel:0661157107" class="contact-btn whatsapp-2">📞 اتصل بنا: 0661157107</a>
     </div>
 
     <footer>
@@ -556,23 +558,6 @@
             secElement.textContent = String(secs).padStart(2, '0');
         }
         setInterval(updateTimer, 1000);
-
-        // تعديل شامل وآمن للتوافق التام مع المتصفحات
-        function sendToWhatsApp() {
-            var inputName = document.getElementById("name").value;
-            var inputPhone = document.getElementById("phone").value;
-            var inputRoom = document.getElementById("room-type").value;
-            var inputDate = document.getElementById("date-pref").value;
-
-            var fullText = "مرحباً وكالة الوثيق، أود حجز عمرة:\n" +
-                           "الاسم: " + inputName + "\n" +
-                           "الهاتف: " + inputPhone + "\n" +
-                           "الغرفة: " + inputRoom + "\n" +
-                           "الرحلة: " + inputDate;
-
-            var finalLink = "https://wa.me?text=" + encodeURIComponent(fullText);
-            window.location.href = finalLink;
-        }
     </script>
 </body>
 </html>
