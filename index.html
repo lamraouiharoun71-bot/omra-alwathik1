@@ -630,10 +630,10 @@
             const encodedMessage = encodeURIComponent(message);
             
             // الرقم الرئيسي الأول للوكالة الذي يستلم الحجوزات التلقائية (يمكن تبديله للرقم الثاني لو رغبت)
-            const whatsappNumber = "213797010102"; 
+           const whatsappNumber = "213797010102"; 
             
             // فتح صفحة الواتساب للزبون تلقائياً بالبيانات المكتوبة
-            window.open(`https://wa.me{whatsappNumber}?text=${encodedMessage}`, '_blank');
+          const whatsappURL = "https://whatsapp.com" + whatsappNumber + "&text=" + encodedMessage;
         }
     </script>
 </body>
