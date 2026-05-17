@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عمرة وكالة الوثيق الأخضرية - فندق رفاع السد مكة</title>
+    <title>عمرة وكالة الوثيق الأخضرية - فنادق مكة المتميزة</title>
     <!-- Google Fonts: Tajawal -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -127,14 +127,14 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
             margin-top: 40px;
         }
 
         .card {
             background: var(--white);
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
             border-top: 4px solid var(--primary);
             box-shadow: 0 6px 15px rgba(0,0,0,0.06);
@@ -196,7 +196,7 @@
         .price-tag {
             font-weight: 700;
             color: var(--primary);
-            font-size: 1.2rem;
+            font-size: 1.15rem;
         }
 
         .scarcity-box {
@@ -377,8 +377,8 @@
                 <div class="card">
                     <div class="icon">🏨</div>
                     <h3>فندق إشراق أجياد</h3>
-                    <div class="location-highlight">📍 على بُعد 25 متر فقط من الحرم</div>
-                    <p>موقع استثنائي فريد يضمن لك الوصول إلى ساحات الحرم الشريف خلال ثوانٍ معدودة، مثالي جداً لكبار السن والعائلات.</p>
+                    <div class="location-highlight">📍 على بُعد 250 متر من الحرم</div>
+                    <p>موقع متميز يضمن لك الوصول السريع إلى ساحات الحرم الشريف خلال دقائق معدودة، مثالي جداً للعائلات.</p>
                 </div>
                 <div class="card">
                     <div class="icon">🏨</div>
@@ -389,7 +389,7 @@
                 <div class="card">
                     <div class="icon">🏨</div>
                     <h3>فندق رفاع السد</h3>
-                    <div class="location-highlight">📍 إقامة متميزة وخدمات متكاملة</div>
+                    <div class="location-highlight">📍 على بُعد 900 متر من الحرم</div>
                     <p>يتميز بخدماته الراقية وأجوائه الهادئة المريحة التي توفر للمعتمر الراحة التامة والسكينة بعد أداء المناسك.</p>
                 </div>
                 <div class="card">
@@ -409,33 +409,38 @@
 
     <section class="pricing-section">
         <div class="container">
-            <h2>جدول الأسعار الموحد لفندقي (فجر النسك / إشراق أجياد)</h2>
-            <p>احصل على أفضل سعر للغرف بمكة بجودة خدمات استثنائية تفوق التوقعات</p>
+            <h2>جدول أسعار رحلة العمرة الشاملة</h2>
+            <p>مقارنة الأسعار حسب الفندق المختار ونوع الغرفة المتوفرة لرحلتكم</p>
             
             <div class="table-responsive">
                 <table>
                     <thead>
                         <tr>
                             <th>نوع الغرفة</th>
-                            <th>سعر الفرد في الرحلة</th>
+                            <th>سعر (فجر النسك / إشراق أجياد)</th>
+                            <th>سعر (فندق رفاع السد)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>غرفة ثنائية (شخصين)</td>
                             <td class="price-tag">319,000 د.ج</td>
+                            <td class="price-tag">249,000 د.ج</td>
                         </tr>
                         <tr>
                             <td>غرفة ثلاثية (3 أشخاص)</td>
                             <td class="price-tag">269,000 د.ج</td>
+                            <td class="price-tag">219,000 د.ج</td>
                         </tr>
                         <tr>
                             <td>غرفة رباعية (4 أشخاص)</td>
                             <td class="price-tag">239,000 د.ج</td>
+                            <td class="price-tag">199,000 د.ج</td>
                         </tr>
                         <tr>
                             <td>غرفة خماسية (5 أشخاص)</td>
                             <td class="price-tag">219,000 د.ج</td>
+                            <td class="price-tag">189,000 د.ج</td>
                         </tr>
                     </tbody>
                 </table>
@@ -470,9 +475,9 @@
                         <label for="hotel">اختر الفندق المفضل لبرنامج إقامتك:</label>
                         <select id="hotel" name="hotel" required>
                             <option value="" disabled selected>-- اختر الفندق --</option>
-                            <option value="ashraq">فندق إشراق أجياد (25 متر عن الحرم)</option>
+                            <option value="ashraq">فندق إشراق أجياد (250 متر عن الحرم)</option>
                             <option value="fajr">فندق فجر النسك (500 متر عن الحرم)</option>
-                            <option value="refaa">فندق رفاع السد مكة</option>
+                            <option value="refaa">فندق رفاع السد مكة (900 متر عن الحرم)</option>
                         </select>
                     </div>
                     <div class="form-group">
