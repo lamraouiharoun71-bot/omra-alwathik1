@@ -629,11 +629,14 @@
             // تحويل النص لترميز متوافق مع الروابط الإلكترونية
             const encodedMessage = encodeURIComponent(message);
             
-            // الرقم الرئيسي الأول للوكالة الذي يستلم الحجوزات التلقائية (يمكن تبديله للرقم الثاني لو رغبت)
-           const whatsappNumber = "213797010102"; 
-            
-            // فتح صفحة الواتساب للزبون تلقائياً بالبيانات المكتوبة
-          const whatsappURL = "https://whatsapp.com" + whatsappNumber + "&text=" + encodedMessage;
+// الرقم الرئيسي الأول للوكالة (تم تعديله لتفادي مشاكل الحظر الدولي)
+const whatsappNumber = "213797010102"; 
+
+// رابط ذكي يدعم التطبيق المباشر والموقع على حد سواء
+const whatsappURL = "https://whatsapp.com" + whatsappNumber + "&text=" + encodedMessage;
+
+// التحويل المباشر في نفس النافذة لمنع المتصفح من حظر الصفحة
+window.location.href = whatsappURL;
         }
     </script>
 </body>
