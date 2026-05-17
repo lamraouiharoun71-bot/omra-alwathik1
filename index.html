@@ -370,7 +370,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             width: 180px;
-            display: none; /* مخفي افتراضياً ويظهر بالجافا سكريبت */
+            display: none;
             animation: fadeInUp 0.3s ease;
         }
 
@@ -591,6 +591,7 @@
             dropdown.style.display = 'none';
         });
 
+        // تفعيل قائمة الأسئلة الشائعة
         document.querySelectorAll('.faq-item').forEach(item => {
             item.addEventListener('click', () => {
                 const answer = item.querySelector('.faq-answer');
@@ -598,6 +599,7 @@
             });
         });
 
+        // العداد التنازلي للتسويق
         let hours = 23, minutes = 59, seconds = 59;
         const timer = setInterval(() => {
             seconds--;
@@ -609,6 +611,30 @@
             document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
             document.getElementById('hours').textContent = String(hours).padStart(2, '0');
         }, 1000);
+
+        // إرسال النموذج باحترافية وتفادي خطأ Method unsupported
+        const form = document.querySelector('.booking-form form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            const data = new FormData(form);
+            fetch(form.action, {
+                method: 'POST', 
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('✨ تم تسجيل طلب حجزك بنجاح! سنتصل بك قريباً لتأكيد التثبيت.');
+                    form.reset(); 
+                } else {
+                    alert('❌ عذراً، حدث خطأ أثناء إرسال الطلب. يرجى تفعيل الحساب في Formspree أو الاتصال بنا مباشرة.');
+                }
+            }).catch(error => {
+                alert('❌ عذراً، هناك مشكلة في الاتصال بالشبكة. يرجى المحاولة مجدداً.');
+            });
+        });
     </script>
 </body>
 </html>
