@@ -29,6 +29,7 @@
             background-color: var(--white);
             color: var(--text-dark);
             line-height: 1.7;
+            padding-bottom: 80px; /* مساحة إضافية لكي لا يغطي صندوق الاتصال أي محتوى */
         }
 
         .container {
@@ -333,36 +334,53 @@
             border-top: 3px solid var(--secondary);
         }
 
-        /* تعديل صندوق أرقام الهاتف ليكون ثابتاً في أسفل الشاشة */
+        /* صندوق أرقام الهواتف الثابت والمحدث لشاشات الموبايل والحاسوب */
         .contact-box {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: var(--secondary);
             color: var(--primary);
             padding: 12px 25px;
-            border-radius: 30px;
+            border-radius: 15px;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             z-index: 1000;
-            direction: ltr;
             text-align: center;
             border: 2px solid var(--white);
+            width: 90%;
+            max-width: 500px;
         }
 
         .contact-box span {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--primary);
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             font-family: 'Tajawal', sans-serif;
         }
 
-        .contact-box a {
+        .phone-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            direction: ltr;
+        }
+
+        .phone-links a {
             color: var(--primary);
             text-decoration: none;
-            font-size: 1.1rem;
-            display: inline-block;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.5);
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .phone-links a:hover {
+            background: var(--white);
         }
     </style>
 </head>
@@ -531,10 +549,14 @@
         </div>
     </footer>
 
-    <!-- صندوق أرقام الهاتف الفعلي للوكالة بدلاً من الواتساب -->
+    <!-- صندوق الاتصال بالهواتف الثلاثة الخاصة بالوكالة -->
     <div class="contact-box">
-        <span>📞 اتصل بنا للاستفسار:</span>
-        <a href="tel:0555123456">0555 12 34 56</a>
+        <span>📞 اتصل بنا مباشرة للاستفسار والحجز:</span>
+        <div class="phone-links">
+            <a href="tel:0797010102">0797 01 01 02</a>
+            <a href="tel:0661157107">0661 15 71 07</a>
+            <a href="tel:0553705616">0553 70 56 16</a>
+        </div>
     </div>
 
     <script>
