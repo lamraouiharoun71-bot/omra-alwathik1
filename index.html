@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عمرة وكالة الوثيق الأخضرية - فنادق مكة المتميزة</title>
+    <title>عمرة وكالة الوثيق الأخضرية - فندق رفاع السد مكة</title>
     <!-- Google Fonts: Tajawal -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
 
     <style>
         :root {
@@ -56,6 +56,19 @@
             text-align: center;
         }
 
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            max-width: 180px;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
         header h1 {
             font-size: 2.6rem;
             font-weight: 900;
@@ -93,6 +106,12 @@
             transform: translateY(-2px);
         }
 
+        .trust-badge {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #CBD5E1;
+        }
+
         .benefits {
             padding: 80px 0;
             text-align: center;
@@ -122,20 +141,15 @@
             text-align: right;
         }
 
+        .card .icon {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+
         .card h3 {
             margin-bottom: 12px;
             color: var(--primary);
             font-size: 1.35rem;
-        }
-
-        .hotel-distance {
-            background-color: #FFFEEF;
-            border-right: 4px solid var(--secondary);
-            padding: 8px 12px;
-            margin: 10px 0;
-            font-weight: bold;
-            font-size: 0.95rem;
-            color: var(--primary);
         }
 
         .pricing-section {
@@ -279,7 +293,6 @@
             font-weight: 700;
             color: var(--primary);
             font-size: 1.1rem;
-            position: relative;
         }
 
         .faq-answer {
@@ -288,6 +301,27 @@
             color: #4A5568;
             border-top: 1px solid #EDF2F7;
             padding-top: 12px;
+        }
+
+        .location-highlight {
+            background-color: #FFFEEF;
+            border-right: 4px solid var(--secondary);
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .ziyarat-list {
+            margin-top: 10px;
+            padding-right: 20px;
+            text-align: right;
+        }
+
+        .ziyarat-list li {
+            margin-bottom: 5px;
+            list-style-type: square;
         }
 
         footer {
@@ -325,31 +359,49 @@
 
     <header>
         <div class="container">
-            <h1>رحلة العمرة المتميزة</h1>
-            <p>اختر إقامتك المفضلة في أقرب الفنادق للحرم المكي الشريف واستمتع بروحانية العبادة مع خدماتنا المتكاملة.</p>
+            <div class="logo-container">
+                <img src="logo.png" alt="شعار وكالة الوثيق الأخضرية" class="logo-img">
+            </div>
+            <h1>عمرة وكالة الوثيق الأخضرية</h1>
+            <p>اختر إقامتك المفضلة في أرقى الفنادق المجهزة لراحتكم واستمتع بروحانية العبادة مع خدماتنا المتكاملة.</p>
             <a href="#booking" class="btn">احجز مقعدك الآن</a>
+            <div class="trust-badge">✓ وكالة معتمدة وموثوقة لخدمتكم</div>
         </div>
     </header>
 
     <section class="benefits">
         <div class="container">
-            <h2>خيارات الإقامة المتاحة بمكة المكرمة</h2>
-            <p>فنادق متميزة مجهزة بالكامل لراحتكم وطمأنينتكم</p>
+            <h2>خدماتنا والأنشطة المقدمة خلال الرحلة</h2>
+            <p>برامج متميزة مجهزة بالكامل لراحتكم وطمأنينتكم</p>
             <div class="grid">
                 <div class="card">
+                    <div class="icon">🏨</div>
                     <h3>فندق إشراق أجياد</h3>
-                    <div class="hotel-distance">📍 على بُعد 25 متر فقط من الحرم</div>
-                    <p>موقع استثنائي يضمن لك الوصول إلى ساحات الحرم الشريف خلال ثوانٍ معدودة، مثالي لكبار السن والعائلات.</p>
+                    <div class="location-highlight">📍 على بُعد 25 متر فقط من الحرم</div>
+                    <p>موقع استثنائي فريد يضمن لك الوصول إلى ساحات الحرم الشريف خلال ثوانٍ معدودة، مثالي جداً لكبار السن والعائلات.</p>
                 </div>
                 <div class="card">
+                    <div class="icon">🏨</div>
                     <h3>فندق فجر النسك</h3>
-                    <div class="hotel-distance">📍 على بُعد 500 متر من الحرم</div>
-                    <p>يوفر إقامة مريحة وهادئة مع غرف واسعة وإطلالات مميزة وخدمات فندقية متكاملة طوال فترة إقامتك.</p>
+                    <div class="location-highlight">📍 على بُعد 500 متر من الحرم</div>
+                    <p>يوفر إقامة مريحة وهادئة مع غرف واسعة وعصرية، وإطلالات مميزة وخدمات فندقية متكاملة طوال فترة إقامتك.</p>
                 </div>
                 <div class="card">
+                    <div class="icon">🏨</div>
                     <h3>فندق رفاع السد</h3>
-                    <div class="hotel-distance">📍 إقامة متميزة وخدمات متكاملة</div>
-                    <p>يتميز بخدماته الراقية وأجوائه الهادئة التي توفر للمعتمر الراحة التامة بعد أداء المناسك.</p>
+                    <div class="location-highlight">📍 إقامة متميزة وخدمات متكاملة</div>
+                    <p>يتميز بخدماته الراقية وأجوائه الهادئة المريحة التي توفر للمعتمر الراحة التامة والسكينة بعد أداء المناسك.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🕌</div>
+                    <h3>برنامج الزيارات والأنشطة</h3>
+                    <p>تنظم الوكالة جولات دينية ميدانية لزيارة المشاعر المقدسة والمعالم التاريخية وتشمل:</p>
+                    <ul class="ziyarat-list">
+                        <li>زيارة مقبرة البقيع والمسجد النبوي الشريف.</li>
+                        <li>جولة في مسجد قباء ومسجد القبلتين.</li>
+                        <li>زيارة جبل أحد وجبل النور (غار حراء).</li>
+                        <li>إرشاد ديني مستمر طوال فترة الرحلة.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -357,8 +409,8 @@
 
     <section class="pricing-section">
         <div class="container">
-            <h2>أسعار الغرف الموحدة لفندقي (فجر النسك / إشراق أجياد)</h2>
-            <p>احصل على أفضل سعر غرف مكة بجودة خدمات استثنائية</p>
+            <h2>جدول الأسعار الموحد لفندقي (فجر النسك / إشراق أجياد)</h2>
+            <p>احصل على أفضل سعر للغرف بمكة بجودة خدمات استثنائية تفوق التوقعات</p>
             
             <div class="table-responsive">
                 <table>
@@ -415,12 +467,12 @@
                         <input type="tel" id="phone" name="phone" required placeholder="05xxxxxxxx">
                     </div>
                     <div class="form-group">
-                        <label for="hotel">اختر الفندق المفضل:</label>
+                        <label for="hotel">اختر الفندق المفضل لبرنامج إقامتك:</label>
                         <select id="hotel" name="hotel" required>
                             <option value="" disabled selected>-- اختر الفندق --</option>
-                            <option value="ashraq">فندق إشراق أجياد (25 متر)</option>
-                            <option value="fajr">فندق فجر النسك (500 متر)</option>
-                            <option value="refaa">فندق رفاع السد</option>
+                            <option value="ashraq">فندق إشراق أجياد (25 متر عن الحرم)</option>
+                            <option value="fajr">فندق فجر النسك (500 متر عن الحرم)</option>
+                            <option value="refaa">فندق رفاع السد مكة</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -444,7 +496,7 @@
             <h2>الأسئلة الشائعة</h2>
             <div class="faq-item">
                 <div class="faq-question">هل السعر يشمل تذاكر الطيران والتأشيرة؟</div>
-                <div class="faq-answer">نعم، الأسعار الموضحة تشمل كافة تكاليف الرحلة من تأشيرة العمرة، تذاكر الطيران الذهاب والإياب، الإقامة في الفندق المختار، والنقل الداخلي المريح.</div>
+                <div class="faq-answer">نعم، الأسعار الموضحة تشمل كافة تكاليف الرحلة من تأشيرة العمرة، تذاكر الطيران الذهاب والإياب، الإقامة في الفندق المختار، والنقل الداخلي المريح بالباصات الحديثة.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">ما هي المزارات المشمولة في برنامج الرحلة؟</div>
